@@ -11,8 +11,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $params = [":username" => $username, ":password" => $password];
     $db = new DataBase($config);
     $result = $db->execute($query, $params)->fetch();
-
+    // var_dump($result);
     if($result) {
+        session_start();
+        $_SESSION["user"] = true;
+        $_SESSION["username"] = $_POST["username"];
         echo "Welcome!";
         header("Location: /");
     } else {
@@ -21,4 +24,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     die();
 }
 
-require "views/login.view.php";
+
+
+guest("views/login.view.php");

@@ -9,8 +9,8 @@ $config = require "config.php";
 $query = "SELECT * FROM books"; 
 $params = [];
 $db = new DataBase($config);
-$books = $db->execute($query, $params)->fetchALL();
+$books = $db->execute($query, $params)->fetchAll();
+var_dump($books);
 
 
-
-require "views/index.view.php";
+auth("views/index.view.php");

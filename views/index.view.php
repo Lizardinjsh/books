@@ -1,5 +1,4 @@
 
-
 <?php require "views/components/head.php" ?>
 <?php require "views/components/navbar.php" ?>
 <style>
@@ -11,8 +10,9 @@ table {
   border-collapse: collapse;
 }
 </style>
-<?php if($result) { ?>
 <body>
+
+<h1>Hello, <?= $_SESSION["username"] ?>!</h1>
 <h1>Buy my books</h1>
 
 <table>
@@ -31,7 +31,7 @@ table {
             <tr>
     <?php } ?>
 </table>
+<button><a href="/logout">Logout!</a></button>
 </body>
 </html>
 
-<?php } ?>
