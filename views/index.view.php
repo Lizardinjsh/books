@@ -1,4 +1,3 @@
-
 <?php require "views/components/head.php" ?>
 <?php require "views/components/navbar.php" ?>
 <style>
@@ -14,7 +13,7 @@ table {
 
 <h1>Hello, <?= $_SESSION["username"] ?>!</h1>
 <h1>Buy my books</h1>
-
+<!-- <?= $books ?> -->
 <table>
     <tr>
         <th>Title</th>
@@ -24,14 +23,13 @@ table {
     </tr>
         <?php foreach ($books as $book) { ?>
             <tr>
-                <td><?= $book["name"] ?> </td>
-                <td><?= $book["author"] ?> </td>
-                <td><?= $book["release_date"] ?> </td>
-                <td><?= $book["availability"] ?> </td>
-            <tr>
+                <td><a href="/show?id=<?= $book["id"] ?>"><?= $book["name"] ?></a></td>
+                <td><a href="/show?id=<?= $book["id"] ?>"><?= $book["author"] ?></a></td>
+                <td><a href="/show?id=<?= $book["id"] ?>"><?= $book["release_date"] ?></a></td>
+                <td><a href="/show?id=<?= $book["id"] ?>"><?= $book["availability"] ?></a></td>
+        </tr>
     <?php } ?>
 </table>
 <button><a href="/logout">Logout!</a></button>
 </body>
 </html>
-

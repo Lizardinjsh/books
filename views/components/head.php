@@ -29,7 +29,12 @@
         padding-right: 50px;
         height: 35px;
     }
-    a
+    a 
+    {
+        all: unset;
+        font-family: "Whisper", cursive;
+    }
+    nav > a
     {
         all: unset;
         font-family: "Whisper", cursive;

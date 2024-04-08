@@ -5,6 +5,6 @@ return
     "host" => "localhost",
     "dbname" => "book_lieknins",
     "user" => "root",
-    "password" => "",
+    "password" => "root",
     "charset" => "utf8mb4"
 ];

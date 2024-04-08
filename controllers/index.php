@@ -10,7 +10,7 @@ $query = "SELECT * FROM books";
 $params = [];
 $db = new DataBase($config);
 $books = $db->execute($query, $params)->fetchAll();
-var_dump($books);
+// var_dump($books);
 
 
-auth("views/index.view.php");
+auth("views/index.view.php", $books);
