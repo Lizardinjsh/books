@@ -7,6 +7,7 @@
 
 table {
   border-collapse: collapse;
+  margin-bottom: 10px;
 }
 </style>
 <body>
@@ -30,6 +31,5 @@ table {
         </tr>
     <?php } ?>
 </table>
-<button><a href="/logout">Logout!</a></button>
 </body>
 </html>

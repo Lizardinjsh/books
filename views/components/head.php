@@ -32,13 +32,15 @@
     a 
     {
         all: unset;
-        font-family: "Whisper", cursive;
+        cursor: pointer;
+        /* font-family: "Whisper", cursive; */
     }
     nav > a
     {
         all: unset;
         font-family: "Whisper", cursive;
         font-size: 40px;
+        cursor: pointer;
     }
     body
     {
@@ -144,12 +146,12 @@
     }
     label
     {
-        possition: relative;
+        position: relative;
         display: inline-block;
     }
     .invalid-data
     {
-        possition: absolute;
+        position: absolute;
         top: 100%;
         left: 0;
         color: red;
@@ -164,6 +166,7 @@
         
         list-style-type: none;
     }
+
 </style>
 </head>
 <body>

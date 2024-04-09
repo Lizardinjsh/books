@@ -5,9 +5,8 @@
 </style>
 <body>
 
-<h1>Hello, <?= $_SESSION["username"] ?>!</h1>
-<h1>Buy my books</h1>
+<h1>Great book '<?= $books["name"] ?>' writen by <?= $books["author"] ?> and released on <?= $books["release_date"] ?></h1>
 <a href="<?= "/edit?id=".$books["id"] ?>">Edit!</a>
-<button><a href="/logout">Logout!</a></button>
+<a href="/">Back!</a>
 </body>
 </html>

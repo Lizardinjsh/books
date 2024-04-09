@@ -32,4 +32,22 @@ class Validator
                 && $data >= $min 
                 && $data <= $max;
     }
+
+    static public function date($data)
+    {
+        if(empty($data))
+        {
+            return false;
+        }
+        else if(str_contains($data, '-'))
+        {
+            list($year, $month, $day) = explode('-', $data);
+            return checkdate($month, $day, $year);
+        }
+        else
+        {
+            return false;
+        }
+
+    }
 }

@@ -6,22 +6,34 @@
     <h1><?= $books["name"] . " by " . $books["author"] ?></h1>
     <form method="POST">
         <label>
-            Add title:
-            <input type="text" name="title" value="<?= $books["name"] ?>">
+            Edit name:
+            <input type="text" name="name" value='<?= $_POST["name"] ?? $books["name"] ?>'>
+            <?php if(isset($errors["name"])){ ?>
+                <p class="invalid-data"><?= $errors["name"] ?></p>
+            <?php } ?>
         </label>
         <label>
-            Add author:
-            <input type="text" name="author" value="<?= $books["author"] ?>">
+            Edit author:
+            <input type="text" name="author" value='<?= $_POST["author"] ?? $books["author"] ?>'>
+            <?php if(isset($errors["author"])){ ?>
+                <p class="invalid-data"><?= $errors["author"] ?></p>
+            <?php } ?>
         </label>
         <label>
-            Add release date:
-            <input type="text" name="releaseDate" value="<?= $books["release_date"] ?>">
+            Edit release date:
+            <input type="text" name="releaseDate" value='<?= $_POST["releaseDate"] ?? $books["release_date"] ?>'>
+            <?php if(isset($errors["releaseDate"])){ ?>
+                <p class="invalid-data"><?= $errors["releaseDate"] ?></p>
+            <?php } ?>
         </label>
         <label>
-            Add availability:
-            <input type="text" name="availability" value="<?= $books["availability"] ?>">
+            Edit availability:
+            <input type="text" name="availability" value='<?= $_POST["availability"] ?? $books["availability"] ?>'>
+            <?php if(isset($errors["availability"])){ ?>
+                <p class="invalid-data"><?= $errors["availability"] ?></p>
+            <?php } ?>
         </label>
-        <button>Save</button>
+        <button>Update!</button>
     </form>
 </body>
 </html>

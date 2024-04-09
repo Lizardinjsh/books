@@ -23,4 +23,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
 
 
-require "views/register.view.php";
+guest("views/register.view.php");

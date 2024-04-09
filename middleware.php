@@ -2,7 +2,7 @@
 
 
 
-function auth($location, $books)
+function auth($location, $books = [], $errors = [])
 {
     if($_SESSION["user"] == true)
     {
@@ -13,14 +13,21 @@ function auth($location, $books)
     }
 }
 
-function guest($location, $books)
+function guest($location, $books = [], $errors = [])
 {
-    if($_SESSION["user"] == true)
+    if(isset($_SESSION["user"]))
     {
-        header("Location: /");
+        if(isset($_SESSION) && $_SESSION["user"] == true)
+        {
+            header("Location: /");
+        }else
+        {
+            require $location;
+        }
     }else
     {
         require $location;
     }
+
 }
 

@@ -18,5 +18,4 @@ $params = [];
 $db = new DataBase($config);
 $books = $db->execute($query, $params)->fetchALL();
 
-
-require "views/books-delete.view.php";
+auth("views/books-delete.view.php", $books);
