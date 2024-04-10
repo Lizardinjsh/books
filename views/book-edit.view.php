@@ -4,7 +4,7 @@
 <?php require "views/components/navbar.php" ?>
     <h1>Edit book here</h1>
     <h1><?= $books["name"] . " by " . $books["author"] ?></h1>
-    <form method="POST">
+    <form method="POST" class="form-edit">
         <label>
             Edit name:
             <input type="text" name="name" value='<?= $_POST["name"] ?? $books["name"] ?>'>
@@ -35,5 +35,6 @@
         </label>
         <button>Update!</button>
     </form>
+    <a href="/" class="green_but">Back!</a>
 </body>
 </html>

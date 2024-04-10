@@ -166,7 +166,40 @@
         
         list-style-type: none;
     }
-
+    .red_but
+    {
+        text-decoration:none;
+        margin-top: 17px;
+        color: red;
+        border: 1px solid red;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .green_but
+    {
+        text-decoration:none;
+        margin-top: 17px;
+        color: green;
+        border: 1px solid green;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .blue_but
+    {
+        text-decoration:none;
+        margin-top: 17px;
+        color: blue;
+        border: 1px solid blue;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .form-edit
+    {
+        margin-bottom: 10px;
+    }
 </style>
 </head>
 <body>

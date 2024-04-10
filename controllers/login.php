@@ -13,9 +13,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $result = $db->execute($query, $params)->fetch();
     // var_dump($result);
     if($result) {
+
+        $query = "SELECT * FROM user WHERE username = :username AND password = :password";
+        $params = [":username" => $username, ":password" => $password];
+        $db = new DataBase($config);
+        $result = $db->execute($query, $params)->fetch();
+
+
         session_start();
         $_SESSION["user"] = true;
         $_SESSION["username"] = $_POST["username"];
+        $_SESSION["user-id"] = $result["id"];
         echo "Welcome!";
         header("Location: /");
     } else {

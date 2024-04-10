@@ -1,6 +1,6 @@
 <?php
 
-if($_SESSION["user"] == false)
+if(!isset($_SESSION["user"]) || $_SESSION["user"] == false)
 {
     echo '<header>
         <nav>
@@ -10,12 +10,13 @@ if($_SESSION["user"] == false)
     </header>';
 }else
 {
+    // $user_id = $_SESSION["user-id"];
     echo '<header>
         <nav>
             <a href="/">Start</a>
             <a href="/addbooks">Add books</a>
-            <a href="/deletebooks">Delete books</a>
+            <a href="/borrowedBooks?id=' . $_SESSION["user-id"] . '">Borrowed books</a>
             <a href="/logout">Logout!</a>
         </nav>
-    </header>';
+</header>';
 }

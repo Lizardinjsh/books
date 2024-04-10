@@ -4,18 +4,9 @@ require "Database.php";
 $config = require "config.php";
 
 
-
-if($_SERVER["REQUEST_METHOD"] == "POST")
-{
-    $book = $_POST["post-selected"];
-    $query = "DELETE FROM books WHERE id = :id";
-    $params = [":id" => $book];
-    $db = new DataBase($config);
-    $books = $db->execute($query, $params)->fetchALL();
-}
-$query = "SELECT * FROM books"; 
-$params = [];
+$book = $_GET["id"];
+$query = "DELETE FROM books WHERE id = :id";
+$params = [":id" => $book];
 $db = new DataBase($config);
 $books = $db->execute($query, $params)->fetchALL();
-
-auth("views/books-delete.view.php", $books);
+header("Location: /");

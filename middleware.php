@@ -2,7 +2,7 @@
 
 
 
-function auth($location, $books = [], $errors = [])
+function auth($location, $books = [], $user = [], $errors = [])
 {
     if($_SESSION["user"] == true)
     {
@@ -13,7 +13,7 @@ function auth($location, $books = [], $errors = [])
     }
 }
 
-function guest($location, $books = [], $errors = [])
+function guest($location, $books = [], $user = [], $errors = [])
 {
     if(isset($_SESSION["user"]))
     {
