@@ -44,14 +44,26 @@
     }
     body
     {
+        display: flex;
         margin-top: 50px;
         background-color: #CFCFCF;
         box-sizing: border-box;
         position: relative;
+        align-items: center;
+        flex-direction: column;
+    }
+    .div-borrowd
+    {
+        flex-direction: row; 
     }
     li 
     {
         font-family: "Whisper", cursive;
+    }
+    .borrowed
+    {
+        font-family: "Roboto", sans-serif;
+        padding: 0;
     }
     .div-for-input-divs
     {
@@ -209,6 +221,11 @@
     .form-edit
     {
         margin-bottom: 10px;
+    }
+    .div-borrowed-books
+    {
+        width: max-content;
+        flex-direction: row;
     }
 </style>
 </head>

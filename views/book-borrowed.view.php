@@ -1,12 +1,16 @@
 <?php require "views/components/head.php" ?>
 <?php require "views/components/navbar.php" ?>
     <?php if($books == true){ ?>
-    <h1>Ur books!</h1>
-    <ul>
-    <?php foreach ($books as $book) { ?>
-        <li><?= $book["name"] ?></li>
-    <?php } ?>
-    </ul>
+    <div class="div-borrowd">
+        <h1>Ur books!</h1>
+        <div class="div-borrowed-books">
+            <ul class="borrowed">
+            <?php foreach ($books[0] as $book) { ?>
+                <li class="borrowed"><?= $book["name"] . " return date of this book is: " . $book["return_date"] ?> <a href="/return?id=<?= $book["book_id"] ?>" class="blue_but">Return!</a></li>            <hr>
+            <?php } ?>
+            </ul>
+        </div>
+    </div>
     <?php }else { ?>
     <h1>No books borrowed</h1>
     <?php }; ?>
