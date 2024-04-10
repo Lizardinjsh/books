@@ -10,5 +10,6 @@ $routes = [
     "/logout" => "controllers/logout.php",
     "/show" => "controllers/book-show.php",
     "/edit" => "controllers/book-edit.php",
-    "/borrowedBooks" => "controllers/book-borrowed.php"
+    "/borrowedBooks" => "controllers/book-borrowed.php",
+    "/borrow" => "controllers/book-borrow.php"
 ];

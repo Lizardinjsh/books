@@ -196,6 +196,16 @@
         border-radius: 5px;
         font-weight: bold;
     }
+    .brown_but
+    {
+        text-decoration:none;
+        margin-top: 17px;
+        color: brown;
+        border: 1px solid brown;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
     .form-edit
     {
         margin-bottom: 10px;
