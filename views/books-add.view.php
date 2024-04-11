@@ -32,7 +32,7 @@
                 <p class="invalid-data"><?= $errors["availability"] ?></p>
             <?php } ?>
         </label>
-        <button>Save</button>
+        <button>Add</button>
     </form>
 </main>
 </body>
