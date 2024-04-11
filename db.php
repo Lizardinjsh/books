@@ -13,15 +13,14 @@ CREATE TABLE books (
 CREATE TABLE user (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	username VARCHAR(155) NOT NULL,
-	password VARCHAR(155) NOT NULL,
-	books_taken date
+	password VARCHAR(155) NOT NULL
 );
 
 CREATE TABLE borrowed_books (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	name VARCHAR(155) NOT NULL,
-	return_date DATETIME,
+	return_date DATETIME NOT NULL,
 	book_id INT NOT NULL,
-	user_id INT,
+	user_id INT NOT NULL,
 	FOREIGN KEY (user_id) REFERENCES user(id)
 );

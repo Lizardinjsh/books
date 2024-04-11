@@ -1,8 +1,11 @@
+<?php $page_title = "Start"; ?>
 <?php require "views/components/head.php" ?>
 <?php require "views/components/navbar.php" ?>
 <style>
     table, td, th {
-  border: 1px solid;
+    border: 1px solid;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
 }
 
 table {
@@ -11,9 +14,9 @@ table {
 }
 </style>
 <body>
-
+<main>
 <h1>Hello, <?= $_SESSION["username"] ?>!</h1>
-<h1>Buy my books</h1>
+<h1>Books we have</h1>
 <!-- <?= $books ?> -->
 <table>
     <tr>
@@ -22,14 +25,31 @@ table {
         <th>Release Date</th>
         <th>Availability</th>
     </tr>
-        <?php foreach ($books as $book) { ?>
-            <tr>
-                <td><a href="/show?id=<?= $book["id"] ?>"><?= $book["name"] ?></a></td>
-                <td><a href="/show?id=<?= $book["id"] ?>"><?= $book["author"] ?></a></td>
-                <td><a href="/show?id=<?= $book["id"] ?>"><?= $book["release_date"] ?></a></td>
-                <td><a href="/show?id=<?= $book["id"] ?>"><?= $book["availability"] ?></a></td>
+    <?php foreach ($books as $book) { ?>
+        <tr>
+            <td><a href="/show?id=<?= $book["id"] ?>">
+                <div class="index-cells">
+                    <?= $book["name"] ?>
+                </div>
+            </a></td>
+            <td><a href="/show?id=<?= $book["id"] ?>">
+                <div class="index-cells">
+                    <?= $book["author"] ?>
+                </div>
+            </a></td>
+            <td><a href="/show?id=<?= $book["id"] ?>">
+                <div class="index-cells">
+                    <?= $book["release_date"] ?>
+                </div>
+            </a></td>
+            <td><a href="/show?id=<?= $book["id"] ?>">
+                <div class="index-cells">
+                    <?= $book["availability"] ?>
+                </div>
+            </a></td>
         </tr>
     <?php } ?>
 </table>
+</main>
 </body>
 </html>

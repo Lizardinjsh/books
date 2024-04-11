@@ -6,7 +6,7 @@ $config = require "config.php";
 
 
 
-$query = "SELECT * FROM books"; 
+$query = "SELECT * FROM books WHERE availability > 0"; 
 $params = [];
 $db = new DataBase($config);
 $books = $db->execute($query, $params)->fetchAll();

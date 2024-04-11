@@ -1,6 +1,7 @@
-
+<?php $page_title = "Add book"; ?>
 <?php require "views/components/head.php" ?>
 <?php require "views/components/navbar.php" ?>
+<main>
     <h1>Add books here</h1>
     <form method="POST">
     <label>
@@ -33,5 +34,6 @@
         </label>
         <button>Save</button>
     </form>
+</main>
 </body>
 </html>

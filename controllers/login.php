@@ -3,6 +3,7 @@
 require "Database.php";
 $config = require "config.php";
 
+$errors = [];
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $password = $_POST["password"];           
@@ -27,11 +28,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         echo "Welcome!";
         header("Location: /");
     } else {
-        header("Location: /register");
+        $errors["login"] = "Wrong username or password";
+        // header("Location: /login");
     }
-    die();
+    // die();
 }
 
 
 
-guest("views/login.view.php");
+guest("views/login.view.php", $errors);

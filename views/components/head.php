@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title><?= $page_title ?></title>
     <style>
     header 
@@ -42,7 +42,7 @@
         font-size: 40px;
         cursor: pointer;
     }
-    body
+    main 
     {
         display: flex;
         margin-top: 50px;
@@ -52,9 +52,16 @@
         align-items: center;
         flex-direction: column;
     }
+    body
+    {
+        margin-top: 50px;
+        background-color: #CFCFCF;
+        box-sizing: border-box;
+    }
     .div-borrowd
     {
         flex-direction: row; 
+        text-align: center;
     }
     li 
     {
@@ -187,6 +194,8 @@
         padding: 5px;
         border-radius: 5px;
         font-weight: bold;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
     }
     .green_but
     {
@@ -197,6 +206,8 @@
         padding: 5px;
         border-radius: 5px;
         font-weight: bold;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
     }
     .blue_but
     {
@@ -207,6 +218,8 @@
         padding: 5px;
         border-radius: 5px;
         font-weight: bold;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
     }
     .brown_but
     {
@@ -217,6 +230,8 @@
         padding: 5px;
         border-radius: 5px;
         font-weight: bold;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
     }
     .form-edit
     {
@@ -226,6 +241,35 @@
     {
         width: max-content;
         flex-direction: row;
+    }
+    form
+    {
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+    }
+    .index-cells
+    {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: 420px) {
+        nav > a
+        {
+            font-size: 20px;
+        }
+        nav
+        {
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 25px;
+        }
+        tr > td
+        {
+            font-size: 10px;
+            font-weight: 500;
+        }
     }
 </style>
 </head>

@@ -44,5 +44,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
 
 
-$page_title = "Edit blog ".$_GET["id"];
-auth("views/book-edit.view.php", $book, $errors);
+$page_title = "Edit book ".$_GET["id"];
+auth("views/book-edit.view.php", $book, [], $errors);

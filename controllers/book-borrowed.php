@@ -10,14 +10,12 @@ $config = require "config.php";
     $db = new DataBase($config);
     $user = $db->execute($query, $params)->fetch();
 
-    $query = "SELECT * FROM borrowed_books"; 
-    $params = [];
-    // $db = new DataBase($config);
+    $query = "SELECT * FROM borrowed_books WHERE user_id = :user_id"; 
+    $params = ["user_id" => $user["id"]];
     $borrowed_books = $db->execute($query, $params)->fetchAll();
 
     $query = "SELECT * FROM books"; 
     $params = [];
-    // $db = new DataBase($config);
     $book = $db->execute($query, $params)->fetchAll();
 
     $book = [$borrowed_books, $book];

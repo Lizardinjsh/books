@@ -42,4 +42,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
 }
 
-auth("views/books-add.view.php", $books, $errors);
+auth("views/books-add.view.php", $books, [], $errors);

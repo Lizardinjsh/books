@@ -1,12 +1,14 @@
+<?php $page_title = "Ur books"; ?>
 <?php require "views/components/head.php" ?>
 <?php require "views/components/navbar.php" ?>
-    <?php if($books == true){ ?>
+<main>
+    <?php if($books[0] != []){ ?>
     <div class="div-borrowd">
         <h1>Ur books!</h1>
         <div class="div-borrowed-books">
             <ul class="borrowed">
             <?php foreach ($books[0] as $book) { ?>
-                <li class="borrowed"><?= $book["name"] . " return date of this book is: " . $book["return_date"] ?> <a href="/return?id=<?= $book["book_id"] ?>" class="blue_but">Return!</a></li>            <hr>
+                <li class="borrowed"><?= "'" . $book["name"] . "' return date of this book is: " . $book["return_date"] ?> <a href="/return?id=<?= $book["book_id"] ?>" class="blue_but">Return!</a></li>            <hr>
             <?php } ?>
             </ul>
         </div>
@@ -14,5 +16,6 @@
     <?php }else { ?>
     <h1>No books borrowed</h1>
     <?php }; ?>
+</main>
 </body>
 </html>

@@ -1,5 +1,4 @@
-
-
+<?php $page_title = "Edit book " . $_GET["id"]; ?>
 <?php require "views/components/head.php" ?>
 <?php require "views/components/navbar.php" ?>
     <h1>Edit book here</h1>
