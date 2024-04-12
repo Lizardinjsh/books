@@ -4,7 +4,7 @@
 <main>
     <?php if($books[0] != []){ ?>
     <div class="div-borrowd">
-        <h1>Ur books!</h1>
+        <h1>Your books</h1>
         <div class="div-borrowed-books">
             <ul class="borrowed">
             <?php foreach ($books[0] as $book) { ?>
@@ -14,7 +14,7 @@
         </div>
     </div>
     <?php }else { ?>
-    <h1>No books borrowed</h1>
+    <h1>Books have not been borrowed</h1>
     <?php }; ?>
 </main>
 </body>

@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $releaseDate = $_POST["releaseDate"];
     $availability = $_POST["availability"];
     $query = "INSERT INTO 
-    books (name, author, release_date, availability) 
+    books (name, author, publication_year, availability) 
     VALUE 
     (:title, :author, :releaseDate, :availability );";
     $params = [":title" => $title, ":author" => $author, ":releaseDate" => $releaseDate, ":availability" => $availability];

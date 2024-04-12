@@ -28,7 +28,7 @@ table {
             <tr>
                 <td><?= $book["name"] ?> </td>
                 <td><?= $book["author"] ?> </td>
-                <td><?= $book["release_date"] ?> </td>
+                <td><?= $book["publication_year"] ?> </td>
                 <td><?= $book["availability"] ?> </td>
             <tr>
     <?php } ?>

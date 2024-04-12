@@ -12,7 +12,7 @@ $config = require "config.php";
     $params = [":id" => $_GET["id"]];
     $book = $db->execute($query, $params)->fetch();
     
-    $query = "DELETE FROM borrowed_books WHERE book_id = :id";
+    $query = "DELETE FROM Borrowings WHERE book_id = :id";
     $params = [":id" => $_GET["id"]];
     $db->execute($query, $params);
 
@@ -22,4 +22,4 @@ $config = require "config.php";
     $params = [":id" => $_GET["id"]];
     $db->execute($query, $params);
 
-header("Location: /borrowedBooks?id=" . $_SESSION["user-id"]);
+header("Location: /Borrowings?id=" . $_SESSION["user-id"]);

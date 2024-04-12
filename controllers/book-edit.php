@@ -34,8 +34,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     } 
     if(empty($errors))
     {
-        $query = "UPDATE books SET name = :name, author = :author, release_date = :release_date, availability = :availability  WHERE id = :id";
-        $params = [":name" => $bookName, ":author" => $bookAuthor, ":release_date" => $bookReleaseDate, ":availability" => $bookAvailability, ":id" => $_GET["id"]];
+        $query = "UPDATE books SET name = :name, author = :author, publication_year = :publication_year, availability = :availability  WHERE id = :id";
+        $params = [":name" => $bookName, ":author" => $bookAuthor, ":publication_year" => $bookReleaseDate, ":availability" => $bookAvailability, ":id" => $_GET["id"]];
         // $db = new Database($config);
         $books = $db->execute($query, $params)->fetch();
         header("Location: /");

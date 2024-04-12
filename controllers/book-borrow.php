@@ -16,14 +16,14 @@ $config = require "config.php";
     $params = [":id" => $_GET["id"]];
     $book = $db->execute($query, $params)->fetch();
 
-    $query = "SELECT * FROM borrowed_books WHERE user_id = :user_id AND name = :name"; 
+    $query = "SELECT * FROM Borrowings WHERE user_id = :user_id AND name = :name"; 
     $params = [":user_id" => $user["id"], ":name" => $book["name"]];
-    $borrowed_books = $db->execute($query, $params)->fetch();
+    $Borrowings = $db->execute($query, $params)->fetch();
 
-    if($borrowed_books == false)
+    if($Borrowings == false)
     {
         $query = "INSERT INTO 
-        borrowed_books (name, return_date, book_id, user_id) 
+        Borrowings (name, return_date, book_id, user_id) 
         VALUE 
         (:name, :return_date, :book_id , :user_id);"; 
         $params = [":name" => $book["name"], ":return_date" => $date->format("Y-m-d H:i:s"), ":book_id" => $book["id"], ":user_id" => $user["id"]];
@@ -36,7 +36,7 @@ $config = require "config.php";
         header("Location: /");
     }else
     {
-        $errors["borrow"] = "You already have this book!";
+        $errors["borrow"] = "You already copped this book!";
         header("Location: /show?id=".$_GET["id"]."&error=true");
     }
 

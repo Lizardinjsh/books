@@ -40,7 +40,7 @@ table {
                 </a></td>
                 <td><a href="/show?id=<?= $book["id"] ?>">
                     <div class="index-cells">
-                        <?= $book["release_date"] ?>
+                        <?= $book["publication_year"] ?>
                     </div>
                 </a></td>
                 <td><a href="/show?id=<?= $book["id"] ?>">

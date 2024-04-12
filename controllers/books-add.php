@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     if(empty($errors))
     {
         $query = "INSERT INTO 
-        books (name, author, release_date, availability) 
+        books (name, author, publication_year, availability) 
         VALUE 
         (:name, :author, :releaseDate, :availability );";
         $params = [":name" => $bookName, ":author" => $bookAuthor, ":releaseDate" => $bookReleaseDate, ":availability" => $bookAvailability];

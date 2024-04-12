@@ -3,7 +3,7 @@
 return 
 [
     "host" => "localhost",
-    "dbname" => "book_lieknins",
+    "dbname" => "books",
     "user" => "root",
     "password" => "",
     "charset" => "utf8mb4"
